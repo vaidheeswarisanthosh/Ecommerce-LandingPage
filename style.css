@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    margin-top: 10px;
+    max-width: 80%;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 10px;
+   
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 300px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 20px;
+}
+
+.product-card p {
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+    
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow:auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position:relative;
+    font-size: small;
+    font-weight:500;
+    height: auto;
+    
+}
+
+.close {
+    position:absolute;
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+}
+
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 600px) {
+    .product-card {
+        max-width: 100%; /* Ensure full width on small screens */
+    }
+
+    #searchInput {
+        width: 90%; /* Search bar adapts to smaller screen sizes */
+    }
+
+    .modal-content {
+        width: 90%; /* Modal adjusts on smaller screens */
+    }
+}
